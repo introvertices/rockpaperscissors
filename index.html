@@ -57,23 +57,23 @@ function scoring(){
     }
     else if (pGuess == "rock" && gChoice == "scissors"){
         pScore ++;
-        console.log("Nice! You won. Now you have " + pScore + " point(s)")
+        console.log("Nice! You won. Now you have " + pScore + " point(s)");
     }
     else if (pGuess == "paper" && gChoice == "rock"){
         pScore ++;
-        console.log("Nice! You won. Now you have " + pScore + " point(s)")
+        console.log("Nice! You won. Now you have " + pScore + " point(s)");
     }
     else if (pGuess == "scissors" && gChoice == "paper"){
         pScore ++;
-        console.log("Nice! You won. Now you have " + pScore + " point(s)")
+        console.log("Nice! You won. Now you have " + pScore + " point(s)");
     }
     else {
         cScore ++;
-        console.log("You lost this round, now I have " + cScore + " point(s)")
+        console.log("You lost this round, now I have " + cScore + " point(s)");
     }
 }
 
-
+//Game Handler calls itself at the end of play, unless prompted not to.
 function gameHandler(){
 
 // order of play
