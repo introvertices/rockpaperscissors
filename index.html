@@ -1,0 +1,60 @@
+<head>
+    <body>
+
+<script>
+    var pGuess = "None";
+    var gAvailable = ["rock","paper","scissors"];
+    var gChoice = gAvailable[getRandomInt(3)];
+
+//creates a function to handle random numbers, for the PC's guesses
+function getRandomInt(max){
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+//Checks the player's choice for validity
+function rpsCheckChoice(pGuess){
+    pGuess = pGuess.toString();
+    pGuess = pGuess.toLowerCase();
+    if (pGuess == "rock" || pGuess == "paper" || pGuess == "scissors"){
+        console.log("You picked " + pGuess);
+    }
+    else{
+        console.log(pGuess +" wasn't a valid guess... Try again.");
+        rpsPlay();
+    }
+}
+
+// Begins play
+function rpsPlay(){
+    
+    pGuess = prompt();
+    rpsCheckChoice(pGuess);
+
+}
+
+//Prints the PC's guess
+function rpsCompGuess(){
+    
+    if (gChoice == 0){
+        console.log("I chose Rock...");
+    }
+    else if (gChoice == 1){
+        console.log("I chose Paper...");
+    }
+    else{
+        console.log("I chose Scissors...")
+    }
+
+}
+
+
+// order of play
+
+console.log("Hello player! Pick from rock, paper, or scissors");
+rpsPlay();
+rpsCompGuess();
+
+</script>
+
+    </body>
+</head>
